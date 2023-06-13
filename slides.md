@@ -12,6 +12,26 @@ drawings:
   persist: false
 transition: slide-left
 title: 'Reactive JavaScript: Unveiling the Magic of Signals'
+layout: image
+image: https://media.tenor.com/CioNfEbcvIsAAAAC/discord-loading.gif
+---
+
+---
+layout: statement
+---
+
+# 2020
+
+---
+layout: image
+image: /intro-by-solid.svg
+---
+
+---
+---
+Hai apa kabar
+
+---
 layout: cover
 ---
 

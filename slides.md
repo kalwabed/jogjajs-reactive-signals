@@ -28,8 +28,23 @@ image: /intro-by-solid.svg
 ---
 
 ---
+layout: center
+class: text-center
 ---
-Hai apa kabar
+
+<img src="knockoutjs-logo.png" alt="ko js" width="500" />
+
+# Fine-grained reactivity
+
+---
+layout: center
+class: text-2xl
+---
+<img src="knockoutjs-logo.png" alt="ko js" width="200" />
+
+- `Observable` (state)
+- `Computed` (side-effect)
+- `PureComputed` (derived state)
 
 ---
 layout: cover

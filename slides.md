@@ -4,10 +4,8 @@ theme: default
 highlighter: shiki
 lineNumbers: false
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  ## Reactive JavaScript: Unveiling the Magic of Signals
+  [kalwabed](https://www.kalwabed.xyz) @ jogjajs, 17 June 2023.
 drawings:
   persist: false
 transition: slide-left
@@ -329,3 +327,141 @@ with Signals.
 Dengan signal kita memiliki flow dari state yang lebih sederhana. Daripada kita oper sebuah nilai ke component tree, kita oper signal object yang mengandung nilai tersebut.
 Cara seperti ini membuat kita bisa mengubah nilai tanpa melakukan re-rendering komponen-komponen yang membawa nilai tersebut.
  -->
+
+---
+layout: section
+---
+
+# Discovering Signals
+
+Library & framework - examples.
+
+---
+layout: center
+---
+
+<img src="/frameworks.svg" width="500" alt="frameworks"/>
+
+<!--
+Vue dan Svelte mengimplementasikan konsep reactivity dengan pendekatan yang berbeda pula. Vue dengan teknik Runtime yang mana dia melakukan tracking dan triggering ketika kode berjalan di browser. Sedangkan Svelte dengan pendekatan Compile-time, seperti namanya, saat dicompile Svelte akan melakukan analisa dan transformasi kode untuk menstimulasi reactivity.
+Masing-masing pendekatan mempunyai kelebihan dan kekurangannya masing-masing.
+ -->
+
+---
+layout: center
+class: max-w-2xl mx-auto
+---
+
+# <logos-react /> React
+What about React?
+
+Meanwhile, you can get a reactive experience in React using third-party libraries like [@preact/signals-react](https://github.com/preactjs/signals) or [MobX](https://mobx.js.org).
+
+---
+class: mx-auto max-w-2xl
+---
+
+# React Forget
+
+<Tweet id="1626590880126889984" />
+
+---
+layout: section
+---
+
+# Reactivity examples with Vue
+
+![](https://media.tenor.com/6fQtF5aqiicAAAAC/troll-warrior.gif)
+
+---
+
+# 1. Simple counter
+
+```javascript
+const count = ref(0)
+// read a value
+console.log(count.value); // 0
+
+// set a value
+count.value = 5;
+
+console.log(count.value); // 5
+```
+
+<style>
+  code {
+    @apply text-xl
+  }
+</style>
+
+---
+
+# 2. with side-effects
+
+```javascript
+import { ref, watchEffect } from 'vue'
+
+console.log("1. Create Signal");
+const count = ref(0);
+
+console.log("2. Create Reaction");
+watchEffect(() => console.log("The count is", count.value))
+
+console.log("3. Set count to 10");
+count.value = 10
+
+/* outputs
+1. Create Signal
+2. Create Reaction
+The count is 0
+3. Set count to 10
+The count is 10
+/*
+```
+
+---
+
+# 3. with side-effects and derivations
+
+<div class="flex gap-8">
+
+```javascript
+import { ref, watchEffect } from 'vue'
+
+console.log("1. Create Signals");
+const firstName = ref("John");
+const lastName = ref("Smith");
+const fullName = () => {
+  console.log("Creating/Updating fullName");
+  return `${firstName.value} ${lastName.value}`
+};
+
+console.log("2. Create Reactions");
+watchEffect(() => console.log("My name is", fullName()))
+
+watchEffect(() => console.log("Your name is not", fullName()));
+
+console.log("3. Set new firstName");
+firstName.value = "Jacob";
+```
+
+```javascript
+/* outputs
+1. Create Signals
+2. Create Reactions
+Creating/Updating fullName
+My name is John Smith
+
+Creating/Updating fullName
+Your name is not John Smith
+
+3. Set new firstName
+
+Creating/Updating fullName
+My name is Jacob Smith
+
+Creating/Updating fullName
+Your name is not Jacob Smith
+*/
+```
+</div>

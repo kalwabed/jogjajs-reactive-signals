@@ -11,5 +11,8 @@
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "slidev-theme-the-unnamed": "^0.0.10"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.1.33"
   }
 }

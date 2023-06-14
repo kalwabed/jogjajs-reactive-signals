@@ -8,7 +8,6 @@ info: |
   [kalwabed](https://www.kalwabed.xyz) @ jogjajs, 17 June 2023.
 drawings:
   persist: false
-transition: slide-left
 title: 'Reactive JavaScript: Unveiling the Magic of Signals'
 layout: image
 image: https://media.tenor.com/v9sdELSzVw4AAAAC/nyan-cat-kawaii.gif
@@ -58,10 +57,13 @@ layout: cover
   Reactive JavaScript: Unveiling the Magic of Signals
 </h1>
 
+A Journey into Reactive JavaScript.
+
+Kalwabed Rizki
+
 <div class="absolute bottom-10">
-  <span class="c-gray-500 dark:c-white">
-    kalwabed @ jogjajs, 17 June 2023
-  </span>
+  <img src="/jogjajs.png" alt="JogjaJS logo" width="130" />
+  June 17th, 2023
 </div>
 
 ---
@@ -93,7 +95,7 @@ layout: two-cols
   <div class="flex gap-4 items-center">
     <ph-twitter-logo class="c-gray-500" />
     <a href="https://twitter.com/kalwabedrzk">kalwabedrzk</a>
-</div>
+  </div>
 
 </div>
 
@@ -371,8 +373,6 @@ layout: section
 
 # Reactivity examples with Vue
 
-![](https://media.tenor.com/6fQtF5aqiicAAAAC/troll-warrior.gif)
-
 ---
 
 # 1. Simple counter
@@ -465,3 +465,22 @@ Your name is not Jacob Smith
 */
 ```
 </div>
+
+---
+layout: center
+---
+
+# Recap
+- Reactive programming allows us to make synchronous state changes.
+- Signals is made popular by SolidJS.
+- Signals generally consist of 3 parts: State, Derivatives, and Effects.
+- The focus of Signals is to address performance issues and to simplify the overall state management of the application.
+- Signals has been adopted by almost all of the major JS frameworks out there.
+
+---
+layout: end
+---
+
+# Thank you!
+
+Slides can be found on [kalwabed.xyz/talks](https://www.kalwabed.xyz/talks)

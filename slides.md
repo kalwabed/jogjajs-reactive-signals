@@ -10,7 +10,7 @@ drawings:
   persist: false
 title: 'Reactive JavaScript: Unveiling the Magic of Signals'
 layout: image
-image: https://media.tenor.com/v9sdELSzVw4AAAAC/nyan-cat-kawaii.gif
+image: https://media.tenor.com/S89fWSFaFowAAAAd/colors-pattern.gif
 ---
 
 ---
@@ -228,50 +228,8 @@ layout: section
 # So, what does this have to do with Signals?
 
 ---
-
-# Signals
-Signals are the main players in what is called the reactive system.
-
-It consists of a:
-- getter
-- setter
-- value
-
+src: ./pages/signals.md
 ---
-layout: statement
----
-
-# Some say that at its core, Signals is an event emitter.
-But the key difference is how it manages its subscriptions.
-
----
-layout: section
----
-
-# Signals are not built alone
-We have partner in crime called **Reactions** and **Derivations**.
-
----
-layout: center
----
-
-# Reactions
-Reactions are functions that are called when a signal changes.
-
----
-layout: center
----
-
-# Derivations
-Derivations are signals that are derived from other signals.
-
----
-layout: center
----
-
-![signals eco](/signals-eco.png)
-
-[source](https://dev.to/this-is-learning/the-evolution-of-signals-in-javascript-8ob)
 
 ---
 layout: section
@@ -280,55 +238,8 @@ layout: section
 # What are problems want to solve?
 
 ---
-layout: center
-class: text-2xl
+src: ./pages/problem.md
 ---
-
-Things that are often discussed in the frontend world are usually about performance and rendering.
-
-One of the issues that often comes up when discussing these two things is **how to manage the state**.
-
----
-
-# How do we manage the state
-Traditional global state with React.
-
-<img src="/react-global-state.png" alt="global state tree in react" width="650" />
-
-<!--
-Manajemen global state di React umumnya sederhana. Tetapi dengan berjalannya waktu, jumlah komponen semakin banyak maka ini akan menjadi kesulitan tersendiri.
-Bisa diakalin dengan memo dan useMemo.
-Lagi-lagi, ketika ukuran codebase semakin berkembang maka akan semakin sulit untuk menentukan dimana optimizations harus diterapkan.
- -->
-
----
-
-# How do we manage the state
-Global state with React context.
-
-<img src="/react-with-context.png" alt="global state tree in react with context" width="650" />
-
-<!--
-Dengan context yang awalnya prinsipnya betul sederhana tetapi akan chaos ketika ukuran dan jumlah component bertamabah besar.
- -->
-
----
-layout: statement
----
-# How do we manage the state with Signals?
-It's simple, we don't.
-
----
-
-# How do we manage the state
-with Signals.
-
-<img src="/signals-flow.png" alt="global state tree with signals" width="650" />
-
-<!--
-Dengan signal kita memiliki flow dari state yang lebih sederhana. Daripada kita oper sebuah nilai ke component tree, kita oper signal object yang mengandung nilai tersebut.
-Cara seperti ini membuat kita bisa mengubah nilai tanpa melakukan re-rendering komponen-komponen yang membawa nilai tersebut.
- -->
 
 ---
 layout: section

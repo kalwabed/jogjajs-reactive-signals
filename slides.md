@@ -20,9 +20,10 @@ layout: statement
 # 2020
 
 ---
-layout: image
-image: /intro-by-solid.png
+layout: center
 ---
+
+![](/intro-by-solid.png)
 
 ---
 layout: center

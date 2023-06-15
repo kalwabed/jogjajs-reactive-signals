@@ -21,7 +21,7 @@ layout: statement
 
 ---
 layout: image
-image: /intro-by-solid.svg
+image: /intro-by-solid.png
 ---
 
 ---

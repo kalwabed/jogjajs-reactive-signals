@@ -2,7 +2,7 @@
 theme: default
 # background: https://source.unsplash.com/collection/94734566/1920x1080
 highlighter: shiki
-lineNumbers: false
+lineNumbers: true
 info: |
   ## Reactive JavaScript: Unveiling the Magic of Signals
   [kalwabed](https://www.kalwabed.xyz) @ jogjajs, 17 June 2023.
@@ -277,105 +277,6 @@ class: mx-auto max-w-2xl
 # React Forget
 
 <Tweet id="1626590880126889984" />
-
----
-layout: section
----
-
-# Reactivity examples with Vue
-
----
-
-# 1. Simple counter
-
-```javascript
-const count = ref(0)
-// read a value
-console.log(count.value); // 0
-
-// set a value
-count.value = 5;
-
-console.log(count.value); // 5
-```
-
-<style>
-  code {
-    @apply text-xl
-  }
-</style>
-
----
-
-# 2. with side-effects
-
-```javascript
-import { ref, watchEffect } from 'vue'
-
-console.log("1. Create Signal");
-const count = ref(0);
-
-console.log("2. Create Reaction");
-watchEffect(() => console.log("The count is", count.value))
-
-console.log("3. Set count to 10");
-count.value = 10
-
-/* outputs
-1. Create Signal
-2. Create Reaction
-The count is 0
-3. Set count to 10
-The count is 10
-/*
-```
-
----
-
-# 3. with side-effects and derivations
-
-<div class="flex gap-8">
-
-```javascript
-import { ref, watchEffect } from 'vue'
-
-console.log("1. Create Signals");
-const firstName = ref("John");
-const lastName = ref("Smith");
-const fullName = () => {
-  console.log("Creating/Updating fullName");
-  return `${firstName.value} ${lastName.value}`
-};
-
-console.log("2. Create Reactions");
-watchEffect(() => console.log("My name is", fullName()))
-
-watchEffect(() => console.log("Your name is not", fullName()));
-
-console.log("3. Set new firstName");
-firstName.value = "Jacob";
-```
-
-```javascript
-/* outputs
-1. Create Signals
-2. Create Reactions
-Creating/Updating fullName
-My name is John Smith
-
-Creating/Updating fullName
-Your name is not John Smith
-
-3. Set new firstName
-
-Creating/Updating fullName
-My name is Jacob Smith
-
-Creating/Updating fullName
-Your name is not Jacob Smith
-*/
-```
-</div>
 
 ---
 layout: center

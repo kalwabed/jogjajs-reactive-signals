@@ -11,6 +11,13 @@ drawings:
 title: 'Reactive JavaScript: Unveiling the Magic of Signals'
 layout: image
 image: https://media.tenor.com/S89fWSFaFowAAAAd/colors-pattern.gif
+fonts:
+  # basically the text
+  sans: 'Inter'
+  # use with `font-serif` css class from windicss
+  serif: 'Lora'
+  # for code blocks, inline code, etc.
+  mono: 'Fira Code'
 ---
 
 ---

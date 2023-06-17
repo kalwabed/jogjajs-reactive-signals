@@ -112,6 +112,12 @@ layout: two-cols
 <img src="/kalwabed.jpeg" alt="profile" class="rd-full w-52 mt-10 ml-auto ring-4 ring-yellow-500" />
 
 ---
+layout: center
+---
+
+<img src="/i-use-arch.jpg" width="500" />
+
+---
 layout: statement
 ---
 

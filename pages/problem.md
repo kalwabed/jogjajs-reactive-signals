@@ -50,6 +50,8 @@ with Signals.
 
 <img src="/signals-flow.png" alt="global state tree with signals" width="650" />
 
+[source](https://preactjs.com/blog/introducing-signals/)
+
 <!--
 Dengan signal kita memiliki flow dari state yang lebih sederhana. Daripada kita oper sebuah nilai ke component tree, kita oper signal object yang mengandung nilai tersebut.
 Cara seperti ini membuat kita bisa mengubah nilai tanpa melakukan re-rendering komponen-komponen yang membawa nilai tersebut.

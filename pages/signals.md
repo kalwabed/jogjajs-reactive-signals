@@ -1,3 +1,7 @@
+---
+layout: center
+---
+
 # Signals
 Signals are the main players in what is called the reactive system.
 

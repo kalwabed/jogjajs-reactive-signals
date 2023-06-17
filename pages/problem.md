@@ -8,6 +8,8 @@ Things that are often discussed in the frontend world are usually about performa
 One of the issues that often comes up when discussing these two things is **how to manage the state**.
 
 ---
+layout: center
+---
 
 # How do we manage the state
 Traditional global state with React.
@@ -20,6 +22,8 @@ Bisa diakalin dengan memo dan useMemo.
 Lagi-lagi, ketika ukuran codebase semakin berkembang maka akan semakin sulit untuk menentukan dimana optimizations harus diterapkan.
  -->
 
+---
+layout: center
 ---
 
 # How do we manage the state
@@ -37,6 +41,8 @@ layout: statement
 # How do we manage the state with Signals?
 It's simple, we don't.
 
+---
+layout: center
 ---
 
 # How do we manage the state

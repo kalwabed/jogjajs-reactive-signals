@@ -228,6 +228,11 @@ The value of `a` will change every time the value of `b` or `c` variable changes
   }
 </style>
 
+---
+layout: center
+---
+
+<Input />
 
 ---
 layout: section
@@ -286,8 +291,6 @@ class: mx-auto max-w-2xl
 
 <Tweet id="1626590880126889984" />
 
----
-layout: center
 ---
 
 # Recap
